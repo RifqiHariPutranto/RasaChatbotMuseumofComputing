@@ -24,16 +24,16 @@ public static class TextureExtentions {
 
         // Create renderTexture to get pixel data from texture
         RenderTexture renderTexture = new RenderTexture(texture.width, texture.height, 32);
-		Graphics.Blit(texture, renderTexture);
+        Graphics.Blit(texture, renderTexture);
 
         // Get pixel data from the render texture and apply to the texture2D created above 
         tex2D.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
         tex2D.Apply();
-		
-		// Release the render texture
-		RenderTexture.active = null;
-		renderTexture.Release();
-		return tex2D;
+
+        // Release the render texture
+        RenderTexture.active = null;
+        renderTexture.Release();
+        return tex2D;
     }
 }
 
@@ -169,9 +169,9 @@ public class TextureScale {
 /// This class is used to serialize users message into a json
 /// object which can be sent over http request to the bot.
 /// </summary>
-public struct PostData {
-	public string message;
-	public string sender;
+public class PostData {
+    public string message;
+    public string sender;
 }
 
 /// <summary>
@@ -180,13 +180,13 @@ public struct PostData {
 /// </summary>
 [Serializable]
 public class RecieveData {
-	public string recipient_id;
-	public string text;
-	public string image;
-	public string attachemnt;
-	public string button;
-	public string element;
-	public string quick_replie;
+    public string recipient_id;
+    public string text;
+    public string image;
+    public string attachemnt;
+    public string button;
+    public string element;
+    public string quick_replie;
 }
 
 /// <summary>
@@ -194,5 +194,5 @@ public class RecieveData {
 /// </summary>
 [Serializable]
 public class RootMessages {
-	public RecieveData[] messages;
+    public RecieveData[] messages;
 }

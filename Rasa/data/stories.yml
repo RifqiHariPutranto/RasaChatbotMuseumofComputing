@@ -1,0 +1,80 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ai definition
+  steps:
+  - intent: ai_definition
+  - action: utter_aidefinition
+  - intent: gratitude
+  - action: utter_gratitude
+
+- story: ai founder
+  steps:
+  - intent: ai_founder
+  - action: utter_aifounder
+  - intent: gratitude
+  - action: utter_gratitude
+
+- story: ai types reactive
+  steps:
+  - intent: ai_types
+  - action: utter_aitypes
+  - intent: ai_typer
+  - action: utter_aityper
+  - intent: gratitude
+  - action: utter_gratitude
+
+- story: ai types limited memory
+  steps:
+  - intent: ai_types
+  - action: utter_aitypes
+  - intent: ai_typelm
+  - action: utter_aitypelm
+  - intent: gratitude
+  - action: utter_gratitude
+
+- story: ai types theory of mind
+  steps:
+  - intent: ai_types
+  - action: utter_aitypes
+  - intent: ai_typetom
+  - action: utter_aitypetom
+  - intent: gratitude
+  - action: utter_gratitude
+
+- story: ai types self aware
+  steps:
+  - intent: ai_types
+  - action: utter_aitypes
+  - intent: ai_typesa
+  - action: utter_aitypesa
+  - intent: gratitude
+  - action: utter_gratitude

@@ -1,3 +1,5 @@
+version: "3.1"
+
 intents:
   - greet
   - goodbye
@@ -6,14 +8,16 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - gratitude
+  - ai_definition
+  - ai_types
+  - ai_typer
+  - ai_typelm
+  - ai_typetom
+  - ai_typesa
+  - ai_founder
 
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
+ 
 
 responses:
   utter_greet:
@@ -34,6 +38,39 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_gratitude:
+  - text: "you're welcome"
+  - text: "my pleasure"
+  - text: "no problem"
+  - text: "sure thing"
+
+  utter_aidefinition:
+  - text: "Artificial intelligence (AI) is a wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence."
+
+  utter_aitypes:
+  - text: "There is 4 main types of AI (Artificial Intelligence), Reactive Machines, Limited Memory, Theory of Mind, and Self-Awareness"
+#    buttons: 
+#      - title: "Reactive AI"
+#        payload: /ai_typer
+#      - title: "Limited Memory AI"
+#        payload: /ai_typelm
+#      - title: "Theory of Mind AI"
+#        payload: /ai_typetom
+#      - title: "Self-Aware AI"
+#        payload: /ai_typesa
+  
+  utter_aityper:
+  - text: "This is the most basic type of ai, reactive machines always respond to identical situations in the exact same way every time, and they are not able to learn actions or conceive of past or future."
+  utter_aitypelm:
+  - text: "Limited memory AI learns from the past and builds experiential knowledge by observing actions or data. This type of AI uses historical, observational data in combination with pre-programmed information to make predictions and perform complex classification tasks. It is the most widely-used kind of AI today."
+  utter_aitypetom:
+  - text: "Theory of Mind AI is the type that can acquire true decision-making capabilities that are similar to humans. Machines with theory of mind AI will be able to understand and remember emotions, then adjust behavior based on those emotions as they interact with people."
+  utter_aitypesa:
+  - text: "The most advanced type of artificial intelligence is self-aware AI. When machines can be aware of their own emotions, as well as the emotions of others around them, they will have a level of consciousness and intelligence similar to human beings. This type of AI will have desires, needs, and emotions as well."
+
+  utter_aifounder:
+  - text: "John McCarthy is one of the FOUNDING FATHERS of artificial intelligence, together with Alan Turing, Marvin Minsky, Allen Newell, and Herbert A."
 
 session_config:
   session_expiration_time: 60
