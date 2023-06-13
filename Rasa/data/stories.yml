@@ -45,8 +45,6 @@ stories:
 
 - story: ai types reactive
   steps:
-  - intent: ai_types
-  - action: utter_aitypes
   - intent: ai_typer
   - action: utter_aityper
   - intent: gratitude
@@ -54,8 +52,6 @@ stories:
 
 - story: ai types limited memory
   steps:
-  - intent: ai_types
-  - action: utter_aitypes
   - intent: ai_typelm
   - action: utter_aitypelm
   - intent: gratitude
@@ -63,8 +59,6 @@ stories:
 
 - story: ai types theory of mind
   steps:
-  - intent: ai_types
-  - action: utter_aitypes
   - intent: ai_typetom
   - action: utter_aitypetom
   - intent: gratitude
@@ -72,8 +66,6 @@ stories:
 
 - story: ai types self aware
   steps:
-  - intent: ai_types
-  - action: utter_aitypes
   - intent: ai_typesa
   - action: utter_aitypesa
   - intent: gratitude
